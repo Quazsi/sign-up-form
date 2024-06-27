@@ -8,8 +8,19 @@ body {
 #sidebar {
     background-image: url(leafs.jpg);
     background-size: cover;
-    width: 50rem;
+    width: 40rem;
     height: 100vh;
+}
+
+#logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    top: 20%;
+    background-color: black;
+    opacity: 60%;
 }
 
 button,
@@ -41,4 +52,12 @@ textarea {
 
 input, label {
     flex-direction: column;
+}
+
+#odin{
+    width: 20%;
+}
+
+#logo {
+    font-size: xx-large;
 }
