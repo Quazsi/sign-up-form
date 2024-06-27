@@ -4,14 +4,41 @@ body {
     margin: 0;
 }
 
-.main {
-    display: flex;
-    flex-direction: column;
-}
 
 #sidebar {
     background-image: url(leafs.jpg);
     background-size: cover;
     width: 50rem;
     height: 100vh;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+}
+
+
+#formArea {
+    display: flex;
+    direction: column;
+    justify-content: center;
+    margin: 10%;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2%;
+}
+.input-box {
+    display: flex;
+    flex-direction: column;
+    padding-right: 20px;
+}
+
+input, label {
+    flex-direction: column;
 }
