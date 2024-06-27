@@ -1,0 +1,9 @@
+body {
+    display: flexbox;
+    flex-direction: row;
+}
+
+.sidebar {
+    background-image: url(leafs.jpg);
+
+}
