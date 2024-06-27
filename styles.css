@@ -1,9 +1,17 @@
 body {
-    display: flexbox;
+    display: flex;
     flex-direction: row;
+    margin: 0;
 }
 
-.sidebar {
-    background-image: url(leafs.jpg);
+.main {
+    display: flex;
+    flex-direction: column;
+}
 
+#sidebar {
+    background-image: url(leafs.jpg);
+    background-size: cover;
+    width: 50rem;
+    height: 100vh;
 }
