@@ -2,26 +2,31 @@ body {
     display: flex;
     flex-direction: row;
     margin: 0;
+    background-color: #f9fafb;
 }
 
+/*Vertical scroll for the right side while sidebar remains stationary*/
+#main {
+    display: flex;
+    flex-direction: column;
+    background-color: #f9fafb;
+    width: 100%;
+    max-height: 100vh; /* Restrict to viewport height */
+    overflow-y: auto; /* Enable vertical scroll when content exceeds viewport */
+}
 
 #sidebar {
-    background-image: url(leafs.jpg);
+    display: flex;
+    flex-direction: column;
+    background-image: url(files/leafs.jpg);
     background-size: cover;
-    width: 40rem;
+    width: 40vw;
     height: 100vh;
+    min-width: 15rem;
+    align-items: center;
 }
 
-#logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    position: relative;
-    top: 20%;
-    background-color: black;
-    opacity: 60%;
-}
+
 
 button,
 input,
@@ -35,19 +40,29 @@ textarea {
 #formArea {
     display: flex;
     direction: column;
-    justify-content: center;
-    margin: 10%;
+    justify-content: flex-start;
+    padding-left: 5%;
+    background-color: white;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+#formExclamation{
+    font-weight: bold;
+    font-size: 1.25rem;
 }
 
 .row {
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-between;
     margin-bottom: 2%;
 }
+
 .input-box {
     display: flex;
     flex-direction: column;
     padding-right: 20px;
+    padding-bottom: .5rem;
 }
 
 input, label {
@@ -60,4 +75,104 @@ input, label {
 
 #logo {
     font-size: xx-large;
+}
+
+@font-face {
+    font-family: 'my-cool-font';
+    src: url('files/Norse-Bold.otf');
+}
+
+
+
+#logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 20%;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+}
+
+#logo {
+    font-family: my-cool-font, sans-serpla;
+    color: white;
+}
+
+#accountArea {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 5%;
+    padding-top: 5%;
+}
+
+#top {
+    margin-top: 8%;
+    margin-left: 5%;
+    font-weight: bold;
+    font-size: 1.25rem;
+
+}
+
+#createAccountBTN {
+        background-color:#596D48;
+        border: none;
+        color: white;
+        padding: 12px 50px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 8px;
+        font-weight: bold;
+}
+
+a:link { 
+    text-decoration: none; 
+    color: #596D48;
+}
+
+
+input {
+    border: 1px solid #E5E7EB;
+    border-radius: 3px;
+    height: 2em;
+    width: 15em;
+  }
+  
+  /* Blue border when the input is focused */
+  input:focus {
+    outline: none;
+    border: 1px solid blue;
+  }
+  
+  /* Red border when the input is invalid and has content (user has typed something) */
+  input:invalid:not(:placeholder-shown) {
+    border-color: red;
+  }
+  
+  /* Error message styles */
+  .error-message {
+    color: red;
+    font-size: 0.7em;
+    display: none; 
+  }
+  /* Show error message if input is invalid and has content */
+  input:invalid:not(:placeholder-shown) + .error-message {
+    display: block;
+    border-color: red;
+
+  }
+
+  #footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%; 
+    margin-bottom: 1.2em;
+    color: white;
+    font-size: 0.8em;
+    text-align: center; 
+    padding: 0.5em; 
 }
